@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
 
-import fb from "../firebase";
+import fb from "./firebase";
 const db = fb.firestore();
 const Blogs = db.collection("blogs");
 
@@ -63,3 +63,5 @@ const BlogEdit = () => {
     )
 
 }
+
+export default BlogEdit;

@@ -1,18 +1,19 @@
 import React from 'react'
-import CreateBlog from '../blogs/create';
-import BlogList from '../blogs/bloglist';
-import BlogView from "../blogs/show";
-import BlogEdit from "../blogs/edit"
+import CreateBlog from './create';
+import BlogList from './bloglist';
+import BlogView from "./show";
+import BlogEdit from "./edit"
 
-import Home from "../pages/home";
-import { NavBar } from '../temps/NavBar';
+import Home from "./components/pages/home";
+import { NavBar } from './components/temps/NavBar';
 import './App.css';
-import { Router } from 'express';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 
 function App() {
   return (
    <Router>
+    <NavBar />
     <Routes>
       <Route exact path='/' element={<Home />} />
       <Route exact path='/blog/' element={<BlogList />} />

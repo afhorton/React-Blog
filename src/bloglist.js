@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import fb from './firebase';
 
-const db = fb.firestone();
+const db = fb.firestore();
 const Blogs = db.collection('blogs');
 
 const DeleteBlog = (id) => {
