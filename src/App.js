@@ -1,8 +1,8 @@
 import React from 'react'
-import CreateBlog from './create';
-import BlogList from './bloglist';
+import CreateBlog from './components/blogs/create';
+import BlogList from './components/blogs/bloglist';
 import BlogView from "./show";
-import BlogEdit from "./edit"
+import BlogEdit from "./components/blogs/edit"
 
 import Home from "./components/pages/home";
 import { NavBar } from './components/temps/NavBar';
@@ -12,15 +12,18 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
+
+   
    <Router>
-    <NavBar />
+    <h1>Hello!</h1>
+    {/* <NavBar /> */}
     <Routes>
-      <Route exact path='/' element={<Home />} />
-      <Route exact path='/blog/' element={<BlogList />} />
+      {/* <Route exact path='/' element={<Home />} /> */}
+       <Route exact path='/blogs/' element={<BlogList />} />
       
-      <Route path='/blog/create' element={<CreateBlog/>} />
-      <Route path='/blog/:id' element={<BlogView />} />
-      <Route path='/blog/edit/:id' element={<BlogEdit/>} />
+      <Route path='/blogs/create' element={<CreateBlog/>} />
+      <Route path='/blogs/:id' element={<BlogView />} />
+      <Route path='/blogs/edit/:id' element={<BlogEdit/>} /> 
     </Routes>
    </Router>
   );

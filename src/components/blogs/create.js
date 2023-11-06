@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import fb from "./firebase";
+import fb from "../../firebase";
 const db = fb.firestore()
 const Blogs = db.collection("blogs");
 
